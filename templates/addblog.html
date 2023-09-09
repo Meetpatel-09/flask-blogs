@@ -1,0 +1,30 @@
+{% include 'header.html' %}
+
+<main class="container mt-5">
+
+     <form action="/addblog" method="post" enctype="multipart/form-data">
+          <div class="mb-3">
+               <label for="exampleFormControlInput1" class="form-label">Title</label>
+               <input type="text" class="form-control" id="exampleFormControlInput1" name="title">
+          </div>
+          <div class="mb-3">
+               <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+               <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+               <label for="image" class="form-label">Choose Image</label>
+               <input type="file" name="image" id="image" class="form-control">
+          </div>
+          <div class="mb-3">
+               <button type="submit" class="btn btn-primary">
+                    Add Blog
+               </button>
+               <button type="reset" class="btn btn-warning">
+                    Reset
+               </button>
+          </div>
+     </form>
+
+</main>
+
+{% include 'footer.html' %}
